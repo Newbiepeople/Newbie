@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+	
+	<package name="studentInfo" namespace="/" extends="struts-default">
+		
+		<action name="student" class="com.nwnu.action.StudentAction">
+			<result name="success">/main.jsp</result>
+			<result name="error">/login.jsp</result>
+			<result name="logout" type="redirect">/login.jsp</result>
+			<result name="save" type="redirectAction">student!list</result>
+		</action>
+		
+		<action name="paper" class="com.nwnu.action.PaperAction">
+			<result name="success">/main.jsp</result>
+			<result name="save" type="redirectAction">paper!paperList</result>
+			  <interceptor-ref name="fileUpload">
+                <!-- 文件大小, 以字节为单位 -->
+                <param name="maximumSize">1025956</param>
+            </interceptor-ref>
+            <!-- 默认拦截器必须放在fileUpload之后，否则无效 -->
+            <interceptor-ref name="defaultStack" />
+			
+		</action>
+		
+		<action name="exam" class="com.nwnu.action.ExamAction">
+			<result name="success">/main.jsp</result>
+		</action>
+		
+		<action name="question" class="com.nwnu.action.QuestionAction">
+			<result name="success">/main.jsp</result>
+			<result name="save" type="redirectAction">question!list</result>
+		</action>
+		
+		<action name="manager" class="com.nwnu.action.ManagerAction">
+			<result name="success">/main.jsp</result>
+			<result name="error">/login2.jsp</result>
+			<result name="logout" type="redirect">/login2.jsp</result>
+		</action>
+	</package>
+	
+
+     
+</struts>
