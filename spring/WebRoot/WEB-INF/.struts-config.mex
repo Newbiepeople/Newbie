@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/cat.do" location="50,150" dimension="298,84" />
+  <StrutsActivity path="/cat2.do" location="650,250" dimension="304,84" />
+  <StrutsActivity path="/form/listCat.jsp" location="650,150" dimension="142,48" />
+  <StrutsActivity path="/form/cat.jsp" location="950,50" dimension="118,48" />
+  <StrutsActivity path="/form/listCat2.jsp" location="50,350" dimension="148,48" />
+  <StrutsActivity path="/form/employee.jsp" location="650,50" dimension="148,48" />
+  <StrutsActivity path="/form/l.jsp" location="950,150" dimension="106,48" />
+  <StrutsTransition id="/cat2.do,list,/form/listCat.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="777,250" />
+      <AbsolutePoint location="777,198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/cat.jsp,null,/cat.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1009,98" />
+      <AbsolutePoint location="1009,113" />
+      <AbsolutePoint location="199,113" />
+      <AbsolutePoint location="199,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cat2.do,list,/form/listCat2.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,262" />
+      <AbsolutePoint location="94,262" />
+      <AbsolutePoint location="94,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cat.do,list,/form/listCat.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="348,183" />
+      <AbsolutePoint location="650,183" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/form/listCat2.jsp,null,/cat2.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="124,350" />
+      <AbsolutePoint location="124,292" />
+      <AbsolutePoint location="650,292" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+
