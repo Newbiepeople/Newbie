@@ -32,9 +32,9 @@ public class DBUtil {
 	public static Connection getConnection() {
 		System.out.println("==============================");
 		try {
-			String url="jdbc:mysql://123.207.168.154:3306/hsc?useUnicode=true&characterEncoding=UTF-8";
+			String url="jdbc:mysql://123.206.77.22:3306/hsc?useUnicode=true&characterEncoding=UTF-8";
 			String username = "root";
-			String pwd = "pp211314";
+			String pwd = "123456";
 			Connection conn = DriverManager.getConnection(url,username,pwd);
 			System.out.println("获取数据库连接成功！");
 			return conn;

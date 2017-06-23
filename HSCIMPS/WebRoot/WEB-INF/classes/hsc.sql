@@ -1,64 +1,66 @@
 /*
-Navicat MySQL Data Transfer
-
-Source Server         : 123.206.77.22_3306
-Source Server Version : 50716
-Source Host           : 123.206.77.22:3306
-Source Database       : hsc
-
-Target Server Type    : MYSQL
-Target Server Version : 50716
-File Encoding         : 65001
-
-Date: 2017-03-01 09:53:34
+SQLyog Ultimate v8.32 
+MySQL - 5.5.12 : Database - hsc
+*********************************************************************
 */
 
-SET FOREIGN_KEY_CHECKS=0;
 
--- ----------------------------
--- Table structure for tb_crypto
--- ----------------------------
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`hsc` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `hsc`;
+
+/*Table structure for table `tb_crypto` */
+
 DROP TABLE IF EXISTS `tb_crypto`;
+
 CREATE TABLE `tb_crypto` (
-  `cryptoId` int(20) NOT NULL AUTO_INCREMENT COMMENT 'å¯†ç ä½“åˆ¶Id',
-  `cryptoName` varchar(32) DEFAULT NULL COMMENT 'åç§°',
-  `englishName` varchar(50) DEFAULT NULL COMMENT 'è‹±æ–‡åç§°',
-  `cryptoDesc` varchar(200) DEFAULT NULL COMMENT 'æè¿°',
-  `createDate` varchar(19) DEFAULT NULL COMMENT 'åˆ›å»ºæ—¥æœŸ',
+  `cryptoId` int(32) NOT NULL AUTO_INCREMENT,
+  `cryptoName` varchar(32) DEFAULT NULL,
+  `englishName` varchar(50) DEFAULT NULL,
+  `cryptoDesc` varchar(200) DEFAULT NULL,
+  `createDate` varchar(19) DEFAULT NULL,
   PRIMARY KEY (`cryptoId`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+/*Data for the table `tb_crypto` */
+
+insert  into `tb_crypto`(`cryptoId`,`cryptoName`,`englishName`,`cryptoDesc`,`createDate`) values (1,'»ùÓÚPKI¹«Ô¿ÃÜÂëÌåÖÆ','Traditional Public Key Cryptosystem','»ùÓÚPKI¹«Ô¿ÃÜÂëÌåÖÆ','2016-10-23 18:25:47'),(2,'»ùÓÚÉí·İ¹«Ô¿ÃÜÂëÌåÖÆ','Identity-based Public Key Cryptosystem','»ùÓÚÉí·İ¹«Ô¿ÃÜÂëÌåÖÆ','2016-10-24 20:33:58'),(3,'ÎŞÖ¤Êé¹«Ô¿ÃÜÂëÌåÖÆ','Certificateless Public Key Cryptosystem','ÎŞÖ¤Êé¹«Ô¿ÃÜÂëÌåÖÆ','2016-10-29 19:22:39');
+
+/*Table structure for table `tb_user` */
+
+DROP TABLE IF EXISTS `tb_user`;
+
+CREATE TABLE `tb_user` (
+  `userId` int(20) NOT NULL AUTO_INCREMENT COMMENT 'ÓÃ»§id',
+  `username` varchar(32) DEFAULT NULL COMMENT 'ÓÃ»§Ãû',
+  `password` varchar(32) DEFAULT NULL COMMENT 'ÃÜÂë',
+  `sex` varchar(2) DEFAULT NULL COMMENT 'ĞÔ±ğ',
+  `age` int(4) DEFAULT NULL COMMENT 'ÄêÁä',
+  `birthDate` varchar(10) DEFAULT NULL COMMENT '³öÉúÈÕÆÚ',
+  `telphone` varchar(11) DEFAULT NULL COMMENT 'ÁªÏµµç»°',
+  `occupation` varchar(50) DEFAULT NULL COMMENT 'Ö°Òµ',
+  `homeAddress` varchar(50) DEFAULT NULL COMMENT '¼ÒÍ¥×¡Ö·',
+  `createDate` varchar(19) DEFAULT NULL COMMENT '´´½¨ÈÕÆÚ',
+  `cryptoId` int(20) DEFAULT NULL COMMENT 'ÃÜÂëÌåÖÆ',
+  `state` varchar(2) DEFAULT NULL COMMENT 'È¨ÏŞ:0¹ÜÀíÔ± 1ÆÕÍ¨ÓÃ»§',
+  `status` varchar(2) DEFAULT NULL COMMENT '×´Ì¬:0ÆôÓÃ 1Í£ÓÃ',
+  PRIMARY KEY (`userId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- ----------------------------
--- Records of tb_crypto
--- ----------------------------
-INSERT INTO `tb_crypto` VALUES ('1', 'åŸºäºPKIå…¬é’¥å¯†ç ä½“åˆ¶', 'Traditional Public Key Cryptosystem', 'åŸºäºPKIå…¬é’¥å¯†ç ä½“åˆ¶', '2016-10-23 18:25:47');
-INSERT INTO `tb_crypto` VALUES ('2', 'åŸºäºèº«ä»½å…¬é’¥å¯†ç ä½“åˆ¶', 'Identity-based Public Key CryptoSystem', 'åŸºäºèº«ä»½å…¬é’¥å¯†ç ä½“åˆ¶', '2016-10-24 17:38:56');
-INSERT INTO `tb_crypto` VALUES ('3', 'æ— è¯ä¹¦å…¬é’¥å¯†ç ä½“åˆ¶', 'Certificateless Public Key Cryptos', 'æ— è¯ä¹¦å…¬é’¥å¯†ç ä½“åˆ¶', '2016-10-24 17:42:06');
+/*Data for the table `tb_user` */
 
--- ----------------------------
--- Table structure for tb_user
--- ----------------------------
-DROP TABLE IF EXISTS `tb_user`;
-CREATE TABLE `tb_user` (
-  `userId` int(20) NOT NULL AUTO_INCREMENT COMMENT 'ç”¨æˆ·id',
-  `username` varchar(32) DEFAULT NULL COMMENT 'ç”¨æˆ·å',
-  `password` varchar(32) DEFAULT NULL COMMENT 'å¯†ç ',
-  `sex` varchar(2) DEFAULT NULL COMMENT 'æ€§åˆ«',
-  `age` int(4) DEFAULT NULL COMMENT 'å¹´é¾„',
-  `birthDate` varchar(10) DEFAULT NULL COMMENT 'å‡ºç”Ÿæ—¥æœŸ',
-  `telphone` varchar(11) DEFAULT NULL COMMENT 'è”ç³»ç”µè¯',
-  `occupation` varchar(50) DEFAULT NULL COMMENT 'èŒä¸š',
-  `homeAddress` varchar(50) DEFAULT NULL COMMENT 'å®¶åº­ä½å€',
-  `createDate` varchar(19) DEFAULT NULL COMMENT 'åˆ›å»ºæ—¶é—´',
-  `cryptoId` int(20) DEFAULT NULL COMMENT 'å¯†ç ä½“åˆ¶',
-  `state` varchar(2) DEFAULT NULL COMMENT 'æƒé™(0ç®¡ç†å‘˜ 1æ™®é€šç”¨æˆ·)',
-  `status` varchar(2) DEFAULT NULL COMMENT 'çŠ¶æ€(0å¯ç”¨ 1åœç”¨)',
-  PRIMARY KEY (`userId`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+insert  into `tb_user`(`userId`,`username`,`password`,`sex`,`age`,`birthDate`,`telphone`,`occupation`,`homeAddress`,`createDate`,`cryptoId`,`state`,`status`) values (1,'admin','96e79218965eb72c92a549dd5a330112','ÄĞ',26,'1990-03-28','13919975822','Ñ§Éú','¸ÊËàÊ¡À¼ÖİÊĞ°²ÄşÇøÎ÷±±Ê¦·¶´óÑ§','2016-10-21 18:13:12',1,'0','0'),(2,'111111','96e79218965eb72c92a549dd5a330112','ÄĞ',20,'1996-03-28','12345678901','Ñ§Éú','¸ÊËà','2016-10-22 18:13:12',1,'1','0'),(3,'1','96e79218965eb72c92a549dd5a330112','ÄĞ',1,'1','1','1','1','2016-10-23 18:13:12',2,'1','1');
 
--- ----------------------------
--- Records of tb_user
--- ----------------------------
-INSERT INTO `tb_user` VALUES ('1', 'admin', '96e79218965eb72c92a549dd5a330112', 'ç”·', '26', '1990-03-28', '13919975822', 'å­¦ç”Ÿ', 'ç”˜è‚ƒçœ', '2016-10-21 18:13:12', '1', '0', '0');
-INSERT INTO `tb_user` VALUES ('10', 'Alice', 'f2b90534bd952942c6657c106195c8d7', 'ç”·', '24', '1993-12-02', '18678380120', 'å­¦ç”Ÿ', 'ç”˜è‚ƒçœå…°å·å¸‚å®‰å®åŒºè¥¿åŒ—å¸ˆèŒƒå¤§å­¦', '2017-02-27 16:01:13', '1', '1', '0');
-INSERT INTO `tb_user` VALUES ('11', 'honey', 'f2b90534bd952942c6657c106195c8d7', 'å¥³', '24', '1993-12-02', '18678380010', 'å­¦ç”Ÿ', 'å±±ä¸œçœå¾·å·å¸‚å¤æ´¥å¿å¤æ´¥å¿', '2017-02-27 16:02:38', '2', '1', '0');
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+

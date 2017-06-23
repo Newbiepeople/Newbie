@@ -77,12 +77,12 @@
 				    		<input type="password" name="password" class="password form-control x319 in"/>
 				    	</div>
 				    	  
-				    	 <div class="form-group">
+				    	<!-- <div class="form-group">
 							<label for="j_captcha" class="t">验证码</label>
 							<input id="inputCode" name="inputCode" type="text" class="form-control x164 in" placeholder="请输入验证码">
 							<i class="code" id="checkCode" onclick="createCode()"></i>
 						</div>
-								 				
+								 -->				
 				    	<div class="form-group">
 							<label class="t"></label>
 							<label for="j_remember" class="m">
