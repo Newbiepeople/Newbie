@@ -1,0 +1,33 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.action.extension" value="helloween"></constant>
+	
+
+	<bean class=""></bean>
+
+	<package name="main" extends="struts-default">
+	
+		<interceptors>
+			<interceptor name="loginInterceptor" class="com.helloweenvsfei.struts2.interceptor"></interceptor>
+		</interceptors>
+		
+		<global-results>
+			<result name="login">/login.jsp</result>
+		</global-results>
+		
+		<global-exception-mappings>
+			<exception-mapping result="/exception.jsp" exception="java.lang.Exception"></exception-mapping>
+		</global-exception-mappings>
+
+		<action name="loginPerson"
+			class="com.helloweenvsfei.struts2.action.LoginAction" method="login">
+			<result name="success">/welcome.jsp</result>
+		</action>
+		
+		
+	</package>
+</struts>

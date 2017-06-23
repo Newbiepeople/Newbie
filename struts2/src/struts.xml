@@ -1,0 +1,126 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<!-- 声明 Struts2 的属性  例如将 Struts2 后缀改为 .helloween -->
+	<!-- 
+		<constant name="struts.action.extension" value="helloween"></constant>
+	-->
+
+	<package name="main" extends="struts-default">
+
+		<interceptors>
+			<interceptor name="authentication"
+				class="com.helloweenvsfei.struts2.interceptor.AuthenticationInterceptor">
+			</interceptor>
+		</interceptors>
+
+		<global-results>
+			<result name="login">/login.jsp</result>
+		</global-results>
+
+		<action name="login"
+			class="com.helloweenvsfei.struts2.action.LoginAction">
+			<result name="success">/welcome.jsp</result>
+		</action>
+
+		<action name="logout"
+			class="com.helloweenvsfei.struts2.action.LoginAction"
+			method="logout">
+			<result name="success">/welcome.jsp</result>
+		</action>
+
+		<action name="*Person"
+			class="com.helloweenvsfei.struts2.action.LoginAction" method="{1}">
+			<result name="success">/welcome.jsp</result>
+		</action>
+
+		<action name="*Book"
+			class="com.helloweenvsfei.struts2.action.BookAction" method="{1}">
+			<result>/successBook.jsp</result>
+			<result name="{1}">/{1}Book.jsp</result>
+			<result name="input">/initAddBook.jsp</result>
+			<result name="list">/listBook.jsp</result>
+		</action>
+
+		<action name="upload"
+			class="com.helloweenvsfei.struts2.action.UploadAction">
+			<interceptor-ref name="fileUpload">
+				<param name="allowedTypes">
+					image/bmp,image/x-png,image/gif,image/jpeg
+				</param>
+				<param name="maximumSize">20480</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack" />
+			<result name="input">/upload.jsp</result>
+			<result name="list">/uploadList.jsp</result>
+		</action>
+
+		<action name="servletAware"
+			class="com.helloweenvsfei.struts2.action.ServletAwareAction">
+			<result>/servletAwareSuccess.jsp</result>
+		</action>
+
+		<action name="timer"
+			class="com.helloweenvsfei.struts2.action.TimerAction">
+			<interceptor-ref name="timer"></interceptor-ref>
+			<result>/timerSuccess.jsp</result>
+		</action>
+
+		<action name="token"
+			class="com.helloweenvsfei.struts2.action.TokenAction">
+			<interceptor-ref name="token"></interceptor-ref>
+			<interceptor-ref name="basicStack" />
+			<result>/tokenSuccess.jsp</result>
+			<result name="input">/tokenInput.jsp</result>
+			<result name="invalid.token">/tokenInvalid.jsp</result>
+		</action>
+
+		<action name="authentication"
+			class="com.helloweenvsfei.struts2.action.AuthenticationAction">
+			<interceptor-ref name="authentication"></interceptor-ref>
+			<result>/authenticationSuccess.jsp</result>
+		</action>
+
+		<action name="wait"
+			class="com.helloweenvsfei.struts2.action.WaitAction">
+			<interceptor-ref name="completeStack" />
+			<interceptor-ref name="execAndWait" />
+			<result>/waitSuccess.jsp</result>
+			<result name="wait">/waiting.jsp</result>
+		</action>
+
+		<action name="ognl"
+			class="com.helloweenvsfei.struts2.action.OgnlAction">
+			<result>/ognlSuccess.jsp</result>
+		</action>
+
+		<action name="convertor"
+			class="com.helloweenvsfei.struts2.action.ConvertorAction" converter="com.helloweenvsfei.struts2.convertor.DateTimeConvertor">
+			<result name="input">/convertor.jsp</result>
+			<result name="success">/convertorSuccess.jsp</result>
+		</action>
+
+		<action name="divLogin"
+			class="com.helloweenvsfei.struts2.action.DivLoginAction">
+			<result name="input">/divLogin.jsp</result>
+			<result name="script">/divLoginScript.jsp</result>
+		</action>
+
+		<action name="divNews"
+			class="com.helloweenvsfei.struts2.action.DivNewsAction">
+			<result name="input">/divNews.jsp</result>
+		</action>
+
+		<action name="treeFile">
+			<result>/treeFile.jsp</result>
+		</action>
+		
+		<action name="error" class="com.helloweenvsfei.struts2.action.ErrorAction">
+			<result>/errorInput.jsp</result>
+		</action>
+
+	</package>
+
+</struts>

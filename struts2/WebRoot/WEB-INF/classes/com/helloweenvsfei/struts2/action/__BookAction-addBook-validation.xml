@@ -1,0 +1,31 @@
+<!DOCTYPE validators PUBLIC
+"-//OpenSymphony Group//XWork Validator 1.0//EN"
+"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+
+	<!-- 检查书名，必须非空 -->
+	<field name="book.name">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>请输入书籍名称</message>
+		</field-validator>
+	</field>
+
+	<!-- 检查作者，必须非空 -->
+	<field name="book.author">
+		<field-validator type="requiredstring">
+			<message>请输入书籍作者</message>
+		</field-validator>
+	</field>
+
+	<!-- 检查出版日期。 -->
+	<field name="book.publishedDate">
+		<field-validator type="date">
+			<param name="min">1900-01-01</param>
+			<param name="max">2200-01-01</param>
+			<message><![CDATA[ 日期格式必须位于 1900-01-01 与 2200-01-01 之间 ]]></message>
+		</field-validator>
+	</field>
+
+</validators>
