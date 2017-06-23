@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+	<head>
+		<title>identity.html</title>
+
+		<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+		<meta http-equiv="description" content="this is my page">
+		<meta http-equiv="content-type" content="text/html; charset=GB18030">
+
+		<!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+	</head>
+
+	<body>
+
+<script>
+	function reloadImage() {
+		document.getElementById('btn').disabled = true;
+		document.getElementById('identity').src='servlet/IdentityServlet?ts=' + new Date().getTime();
+	}
+	</script>
+
+		<img src="servlet/IdentityServlet" id="identity" onload="btn.disabled = false; " />
+		<input type=button value=" 换个图片 " onclick="reloadImage()" id="btn">
+
+	</body>
+</html>
