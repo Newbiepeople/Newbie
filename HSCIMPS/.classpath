@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resourse"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/Sun JDK 1.6.0_13"/>
+	<classpathentry kind="con" path="melibrary.com.genuitec.eclipse.j2eedt.core.MYECLIPSE_JAVAEE_5_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/bcprov-jdk16-1.46.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-codec-1.8.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/commons-logging-1.0.4.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/dwr.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jna-3.2.5.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jpbc-api-2.0.0.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jpbc-benchmark-2.0.0.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jpbc-crypto-2.0.0.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jpbc-mm-2.0.0.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jpbc-pbc-2.0.0.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jpbc-plaf-2.0.0.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/jstl.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/standard.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/mysql-connector-java-5.1.10-bin.jar"/>
+	<classpathentry kind="lib" path="WebRoot/WEB-INF/lib/servlet-api.jar"/>
+	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
+</classpath>
