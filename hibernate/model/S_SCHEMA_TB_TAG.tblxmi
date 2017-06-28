@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RDBSchema="http:///com/ibm/etools/rdbschema.ecore" name="TB_TAG" comments="" primaryKey="//@namedGroup.0">
+  <database href="S.dbxmi#/"/>
+  <schema href="S_SCHEMA.schxmi#/"/>
+  <columns xsi:type="RDBSchema:RDBColumn" name="ID">
+    <type xsi:type="RDBSchema:SQLExactNumeric">
+      <originatingType href="CLOUDSCAPE_V50_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="NAME">
+    <type xsi:type="RDBSchema:SQLExactNumeric">
+      <originatingType href="CLOUDSCAPE_V50_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <namedGroup xsi:type="RDBSchema:SQLReference" name="C1183555" members="//@columns.0" constraint="//@constraints.0"/>
+  <constraints name="C1183555" type="PRIMARYKEY" primaryKey="//@namedGroup.0"/>
+</RDBSchema:RDBTable>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RDBSchema="http:///com/ibm/etools/rdbschema.ecore" name="TB_EMAIL" comments="" primaryKey="//@namedGroup.0">
+  <database href="S.dbxmi#/"/>
+  <schema href="S_SCHEMA.schxmi#/"/>
+  <columns xsi:type="RDBSchema:RDBColumn" name="ID">
+    <type xsi:type="RDBSchema:SQLExactNumeric">
+      <originatingType href="CLOUDSCAPE_V50_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="EMAIL">
+    <type xsi:type="RDBSchema:SQLExactNumeric">
+      <originatingType href="CLOUDSCAPE_V50_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="PERSON_ID">
+    <type xsi:type="RDBSchema:SQLExactNumeric">
+      <originatingType href="CLOUDSCAPE_V50_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <namedGroup xsi:type="RDBSchema:SQLReference" name="C3566017" members="//@columns.0" constraint="//@constraints.0"/>
+  <namedGroup xsi:type="RDBSchema:RDBReferenceByKey" name="C8302430" members="//@columns.2" constraint="//@constraints.1">
+    <target href="S_SCHEMA_TABLE1.tblxmi#//@namedGroup.0"/>
+  </namedGroup>
+  <constraints name="C3566017" type="PRIMARYKEY" primaryKey="//@namedGroup.0"/>
+  <constraints name="C8302430" type="FOREIGNKEY" referenceByKey="//@namedGroup.1"/>
+</RDBSchema:RDBTable>

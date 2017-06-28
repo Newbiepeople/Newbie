@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.helloweenvsfei.hibernate.bean">
+
+	<class name="Post" table="tb_post">
+
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+
+		<property name="title"></property>
+
+		<property name="content" type="text"></property>
+
+		<set name="tags" table="tb_tag_post" cascade="persist" lazy="false">
+			<key column="post_id"></key>
+			<many-to-many column="tag_id" class="com.helloweenvsfei.hibernate.bean.Tag" where=" name != '' " not-found="exception" ></many-to-many>
+		</set>
+
+	</class>
+
+</hibernate-mapping>

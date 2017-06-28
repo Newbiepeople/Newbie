@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.helloweenvsfei.hibernate.bean">
+
+	<class name="VersionBean" table="tb_version_bean">
+
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+
+		<version name="version" column="version" type="integer"></version>
+
+		<property name="name" type="string" column="name"></property>
+
+	</class>
+
+</hibernate-mapping>

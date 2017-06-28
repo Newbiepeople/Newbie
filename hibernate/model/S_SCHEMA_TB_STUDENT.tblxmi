@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:RDBSchema="http:///com/ibm/etools/rdbschema.ecore" name="TB_STUDENT" comments="" primaryKey="//@namedGroup.0">
+  <database href="S.dbxmi#/"/>
+  <schema href="S_SCHEMA.schxmi#/"/>
+  <columns xsi:type="RDBSchema:RDBColumn" name="ID">
+    <type xsi:type="RDBSchema:SQLExactNumeric">
+      <originatingType href="CLOUDSCAPE_V50_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="NAME">
+    <type xsi:type="RDBSchema:SQLExactNumeric">
+      <originatingType href="CLOUDSCAPE_V50_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="SEX">
+    <type xsi:type="RDBSchema:SQLExactNumeric">
+      <originatingType href="CLOUDSCAPE_V50_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <columns xsi:type="RDBSchema:RDBColumn" name="CLASS_ID">
+    <type xsi:type="RDBSchema:SQLExactNumeric">
+      <originatingType href="CLOUDSCAPE_V50_Primitives.xmi#SQLExactNumeric_1"/>
+    </type>
+  </columns>
+  <namedGroup xsi:type="RDBSchema:SQLReference" name="C1179328" members="//@columns.0" constraint="//@constraints.0"/>
+  <namedGroup xsi:type="RDBSchema:RDBReferenceByKey" name="C1294735" members="//@columns.3" constraint="//@constraints.1">
+    <target href="S_SCHEMA_TB_CLASS.tblxmi#//@namedGroup.0"/>
+  </namedGroup>
+  <constraints name="C1179328" type="PRIMARYKEY" primaryKey="//@namedGroup.0"/>
+  <constraints name="C1294735" type="FOREIGNKEY" referenceByKey="//@namedGroup.1"/>
+</RDBSchema:RDBTable>

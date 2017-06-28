@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.helloweenvsfei.hibernate.bean">
+
+	<class name="Article" table="tb_article">
+
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+
+		<property name="name"></property>
+
+		<property name="content" type="text"></property>
+
+		<many-to-one name="type" column="type_id" cascade="persist"
+			lazy="false" not-found="ignore">
+		</many-to-one>
+
+	</class>
+
+</hibernate-mapping>

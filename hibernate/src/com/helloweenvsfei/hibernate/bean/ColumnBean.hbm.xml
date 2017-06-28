@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.helloweenvsfei.hibernate.bean">
+
+	<class name="ColumnBean" table="tb_column_bean">
+
+		
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+
+		<version name="version"></version>
+		
+		<property name="name" column="name" length="255"></property>
+
+		<property name="salary" precision="2" scale="10" length="255"
+			column="salary" type="string" update="true" insert="true"
+			lazy="false" unique="false" not-null="false">
+		</property>
+
+		<property name="date" type="date"></property>
+
+
+		<!-- 
+			<property name="nameLength"></property>
+		-->
+
+	</class>
+
+</hibernate-mapping>

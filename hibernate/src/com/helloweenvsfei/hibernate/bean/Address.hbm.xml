@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.helloweenvsfei.hibernate.bean">
+
+	<class name="Address" table="tb_address">
+
+		<id name="id" column="id">
+			<!-- 
+			<generator class="native" />
+			 -->
+		</id>
+
+		<property name="address" />
+		<property name="zip" />
+		<property name="telephone" />
+
+		<one-to-one name="customer"></one-to-one>
+		
+	</class>
+	
+</hibernate-mapping>

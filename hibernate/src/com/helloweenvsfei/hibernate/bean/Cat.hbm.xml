@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.helloweenvsfei.hibernate.bean">
+
+	<class name="Cat" table="tb_cat">
+
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+
+		<property name="name" type="string" column="name"></property>
+
+		<property name="description" type="text"></property>
+
+		<property name="createDate" type="timestamp"></property>
+
+		<many-to-one name="mother" column="mother_id"></many-to-one>
+
+		<bag name="events" inverse="true">
+			<key column="cat_id"></key>
+			<one-to-many class="Event" />
+		</bag>
+
+		<sql-query name="cat by name">
+			<![CDATA[ 
+				select c from Cat c where c.name = :name
+			]]>
+			<return alias="" class="com.helloweenvsfei.hibernate.bean.Cat" />
+		</sql-query>
+		
+		<sql-query name="cat by mother">
+			<![CDATA[ 
+				select c from Cat c where c.mother.name = :mother
+			]]>
+			<return alias="" class="com.helloweenvsfei.hibernate.bean.Cat" />
+		</sql-query>
+	</class>
+
+</hibernate-mapping>

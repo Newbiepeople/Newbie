@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.helloweenvsfei.hibernate.bean">
+
+	<class name="IdBean" table="tb_id_bean">
+
+		<id name="id" column="id">
+			<generator class="uuid" />
+			<!-- 
+				<generator class="increment" />
+				<generator class="native" />
+				<generator class="identity" />
+				<generator class="sequence" />
+				<generator class="uuid" />
+				<generator class="hilo" />
+				<generator class="seqhilo" />
+				<generator class="guid" />
+				<generator class="assigned" />
+				<generator class="select" />
+				<generator class="foreign" />
+				<generator class="sequence-identity" />
+				<generator class="" />
+			-->
+		</id>
+
+		<property name="name" type="string" column="name"></property>
+
+	</class>
+
+</hibernate-mapping>

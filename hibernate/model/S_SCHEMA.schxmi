@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDBSchema:RDBSchema xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:RDBSchema="http:///com/ibm/etools/rdbschema.ecore" name="SCHEMA">
+  <database href="S.dbxmi#/"/>
+  <tables href="S_SCHEMA_TABLE1.tblxmi#/"/>
+  <tables href="S_SCHEMA_TB_EMAIL.tblxmi#/"/>
+  <tables href="S_SCHEMA_TB_TYPE.tblxmi#/"/>
+  <tables href="S_SCHEMA_TB_ARTICLE.tblxmi#/"/>
+  <tables href="S_SCHEMA_TB_CLASS.tblxmi#/"/>
+  <tables href="S_SCHEMA_TB_STUDENT.tblxmi#/"/>
+  <tables href="S_SCHEMA_TB_TAG.tblxmi#/"/>
+  <tables href="S_SCHEMA_TB_POST.tblxmi#/"/>
+  <tables href="S_SCHEMA_TB_TAG_POST.tblxmi#/"/>
+</RDBSchema:RDBSchema>

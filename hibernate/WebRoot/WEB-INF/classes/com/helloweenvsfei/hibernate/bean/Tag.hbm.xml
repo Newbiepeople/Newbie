@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.helloweenvsfei.hibernate.bean">
+
+	<class name="Tag" table="tb_tag">
+
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+
+		<property name="name" />
+		
+		<set name="posts" table="tb_tag_post" inverse="true">
+			<key column="tag_id"></key>
+			<many-to-many column="post_id" class="com.helloweenvsfei.hibernate.bean.Post"></many-to-many>
+		</set>
+
+	</class>
+
+</hibernate-mapping>

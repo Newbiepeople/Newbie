@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+<session-factory>
+
+	<mapping resource="com/helloweenvsfei/hibernate/bean/Event.hbm.xml" />
+	<mapping resource="com/helloweenvsfei/hibernate/bean/Cat.hbm.xml" />
+	
+	<mapping resource="com/helloweenvsfei/hibernate/bean/Person3.hbm.xml" />
+	
+	<mapping resource="com/helloweenvsfei/hibernate/bean/Person2.hbm.xml" />
+	<mapping resource="com/helloweenvsfei/hibernate/bean/Email.hbm.xml" />
+	
+	<mapping resource="com/helloweenvsfei/hibernate/bean/Type.hbm.xml" />
+	<mapping resource="com/helloweenvsfei/hibernate/bean/Article.hbm.xml" />
+	
+	<mapping resource="com/helloweenvsfei/hibernate/bean/Clazz.hbm.xml" />
+	<mapping resource="com/helloweenvsfei/hibernate/bean/Student.hbm.xml" />
+	
+	<mapping resource="com/helloweenvsfei/hibernate/bean/Tag.hbm.xml" />
+	<mapping resource="com/helloweenvsfei/hibernate/bean/Post.hbm.xml" />
+	
+	<mapping resource="com/helloweenvsfei/hibernate/bean/Ship.hbm.xml" />
+	<mapping resource="com/helloweenvsfei/hibernate/bean/Sailor.hbm.xml" />
+	
+	<mapping resource="com/helloweenvsfei/hibernate/bean/Customer.hbm.xml" />
+	<mapping resource="com/helloweenvsfei/hibernate/bean/Address.hbm.xml" />
+
+</session-factory>
+
+</hibernate-configuration>

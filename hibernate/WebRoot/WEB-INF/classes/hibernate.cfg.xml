@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+
+		<property name="connection.driver_class">
+			com.mysql.jdbc.Driver
+		</property>
+		<property name="connection.url">
+			jdbc:mysql://localhost:3306/hibernate?characterEncoding=UTF-8
+		</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">admin</property>
+
+		<property name="dialect">
+			org.hibernate.dialect.MySQL5Dialect
+		</property>
+
+		<property name="show_sql">true</property>
+		<property name="hbm2ddl.auto">create</property>
+
+		<!-- 要加这一句  否则可能会遇到异常 -->
+		<property name="current_session_context_class">thread</property>
+
+		<mapping class="com.helloweenvsfei.hibernate.bean.Cat" />
+		<mapping class="com.helloweenvsfei.hibernate.bean.Event" />
+		<mapping class="com.helloweenvsfei.hibernate.bean.ColumnBean" />
+		<mapping class="com.helloweenvsfei.hibernate.bean.VersionBean" />
+		<mapping class="com.helloweenvsfei.hibernate.bean.Person2" />
+		<mapping class="com.helloweenvsfei.hibernate.bean.Email" />
+		
+		<mapping class="com.helloweenvsfei.hibernate.bean.Type" />
+		<mapping class="com.helloweenvsfei.hibernate.bean.Article" />
+		
+		<mapping class="com.helloweenvsfei.hibernate.bean.Clazz" />
+		<mapping class="com.helloweenvsfei.hibernate.bean.Student" />
+		
+		<mapping class="com.helloweenvsfei.hibernate.bean.Tag" />
+		<mapping class="com.helloweenvsfei.hibernate.bean.Post" />
+		
+		<mapping class="com.helloweenvsfei.hibernate.bean.Ship" />
+		<mapping class="com.helloweenvsfei.hibernate.bean.Sailor" />
+		
+		<mapping class="com.helloweenvsfei.hibernate.bean.Customer" />
+		<mapping class="com.helloweenvsfei.hibernate.bean.Address" />
+
+	</session-factory>
+
+</hibernate-configuration>

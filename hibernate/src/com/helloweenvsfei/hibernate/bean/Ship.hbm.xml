@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.helloweenvsfei.hibernate.bean">
+
+	<class name="Ship" table="tb_ship">
+
+		<id name="id" column="id">
+			<generator class="native" />
+		</id>
+
+		<property name="name" />
+
+		<set name="sailors" inverse="true">
+			<key column="ship_id"></key>
+			<one-to-many
+				class="com.helloweenvsfei.hibernate.bean.Sailor" />
+		</set>
+
+		<many-to-one name="captain" cascade="persist" column="caption_id" unique="true" />
+		
+		<!--
+		<one-to-one name="captain" foreign-key="captain_id" ></one-to-one>
+		-->
+		
+	</class>
+	
+</hibernate-mapping>
